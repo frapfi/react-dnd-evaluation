@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import LittleBlackBox from './LittleBlackBox';
+import LittleGreyBox from './LittleGreyBox';
 
 export default class DraggableZone extends Component {
 
@@ -9,7 +11,11 @@ export default class DraggableZone extends Component {
 				border: '5px solid',
 				width: '35%'
 			}}>
-				DraggableZone
+				<div className="row">
+					<LittleBlackBox/>
+					<LittleGreyBox/>
+				</div>
+
 			</div>
 		)
 	}

@@ -8,7 +8,7 @@ class DropBox extends Component {
 	render() {
 		return (
 			<div className="col-sm-8" style={{
-				height: '200px',
+				height: '500px',
 				border: '5px solid',
 				width: '55%',
 				marginRight: '50px'
