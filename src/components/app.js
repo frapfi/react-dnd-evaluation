@@ -1,21 +1,22 @@
 import React, { Component } from 'react';
 import DropBox from './DropBox';
 import DraggableZone from './DraggableZone';
+import LittleBox from './LittleBox';
 
-import LittleDragBox from './LittleDragBox';
+import { DragDropContext } from 'react-dnd';
+import HTML5Backend from 'react-dnd-html5-backend';
 
-export default class App extends Component {
+class App extends Component {
 	render() {
 		return (
-			<div className="row">
+			<div className="row" >
 				<DropBox />
 				<DraggableZone>
-					<LittleDragBox color="black" />
-					<LittleDragBox color="grey" />
-					<LittleDragBox color="orange" />
-					<LittleDragBox color="blue" />
+					<LittleBox color="orange" />
 				</DraggableZone>
 			</div>
 		);
 	}
 }
+
+export default DragDropContext(HTML5Backend)(App);
